@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Disease Prediction System</h2>
+            <button onclick="showForm('diabetes')">Diabetes</button>
+            <button onclick="showForm('heart')">Heart Disease</button>
+            <button onclick="showForm('parkinsons')">Parkinson's</button>
+        </div>
+        <div class="main-content">
+            <h1 id="form-title">Disease Prediction</h1>
+            <div class="form" id="diabetes-form">
+                <input type="number" id="age" placeholder="Age">
+                <input type="text" id="sex" placeholder="Sex">
+                <input type="number" id="bmi" placeholder="BMI">
+                <input type="number" id="glucose" placeholder="Fasting Blood Glucose">
+                <input type="number" id="hba1c" placeholder="HbA1c">
+                <input type="number" id="bloodPressure" placeholder="Blood Pressure">
+                <input type="text" id="familyHistoryDiabetes" placeholder="Family History (Yes/No)">
+                <button onclick="predict('diabetes')">Predict</button>
+                <p id="diabetes-result"></p>
+            </div>
+            <div class="form" id="heart-form" style="display: none;">
+                <input type="number" id="ageHeart" placeholder="Age">
+                <input type="text" id="sexHeart" placeholder="Sex">
+                <input type="number" id="cholesterol" placeholder="Cholesterol Level">
+                <input type="number" id="heartRate" placeholder="Heart Rate">
+                <input type="number" id="systolicBP" placeholder="Systolic BP">
+                <input type="number" id="diastolicBP" placeholder="Diastolic BP">
+                <input type="text" id="familyHistoryHeart" placeholder="Family History (Yes/No)">
+                <button onclick="predict('heart')">Predict</button>
+                <p id="heart-result"></p>
+            </div>
+            <div class="form" id="parkinsons-form" style="display: none;">
+                <input type="number" id="ageParkinsons" placeholder="Age">
+                <input type="text" id="sexParkinsons" placeholder="Sex">
+                <input type="text" id="tremor" placeholder="Tremor (Yes/No)">
+                <input type="text" id="rigidity" placeholder="Rigidity (Yes/No)">
+                <input type="text" id="bradykinesia" placeholder="Bradykinesia (Yes/No)">
+                <button onclick="predict('parkinsons')">Predict</button>
+                <p id="parkinsons-result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
